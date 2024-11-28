@@ -139,10 +139,10 @@ async def preflight():
         LOGGER.info(f"Repository: {repository}{f'@{ref}' if ref else ''}")
 
         if TOKEN is None:
-            error("No GitHub token found, use env GITHUB_TOKEN to set this.")
+            error("No GitHub token found, use env INPUT_GITHUB_TOKEN to set this.")
 
         if repository is None:
-            error("No repository found, use env REPOSITORY to set this.")
+            error("No repository found, use env GITHUB_REPOSITORY to set this.")
 
         if category is None:
             error("No category found, use env CATEGORY to set this.")
